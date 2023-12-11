@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Reservation Request</h1>
+        <form onsubmit="handleSubmit(event);" novalidate>
+            <fieldset>
+                <legend>
+                 <h5>General Information</h5>
+                </legend>
+                    <div>
+                        <label for="arrival_date">Arribal date:</label>
+                        <input type="date" name="arrival_date" id="arrival_date" required>
+                        <span id="arrival_date_error"></span>
+                    </div>
+                     <div>
+                        <label for="nights">Nights:</label>
+                        <input type="number" name="nights" id="nights" required>
+                        <span id="nights_error"></span>
+                     </div>
+                     <div>
+                        <label for="adults">Adults:</label>
+                        <select name="arrival_date" id="arrival_date" required>
+                            <option value="0">0</option>
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                     </div>
+                     <div>
+                        <label for="children">Children:</label>
+                        <select name="children" id="children" required>
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                     </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <h5>Preferences</h5>
+                </legend>
+                <div>
+                    <label for="">Room type:</label>
+
+                    <input type="radio" id="standard" name="radioType" value="standard">
+                    <label for="standard">Standard</label>
+
+                    <input type="radio" id="bussiness" name="radioType" value="bussiness">
+                    <label for="bussiness">Bussiness</label>
+
+                    <input type="radio" id="suite" name="radioType" value="suite">
+                    <label for="suite">Suite</label>
+
+                    <span id="radioType_error"></span>
+
+                </div>
+                <div>
+                    <label for="">Bed type:</label>
+
+                    <input type="radio" id="king" name="bedType" value="king">
+                    <label for="king">King</label>
+
+                    <input type="radio" id="double_double" name="bedType" value="double_double">
+                    <label for="double_double">Double Double</label>
+
+                    <span id="bedType_error"></span>
+                </div>
+                    <input type="checkbox" id="smoking" name="smoking">
+                    <label for="smoking">Smoking</label>
+                    <span id="smoking_error"></span>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    <h5>Contact Information</h5>
+                </legend>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" required>
+                    <span id="name_error"></span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                    <span id="email_error"></span>
+                </div>
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="number" name="phone" id="phone" required>
+                    <span id="phone_error"></span>
+                </div>
+            </fieldset>
+            <section>
+                <button type="submit">Submit Reservation</button>
+                <button type="button" onclick="handleClear();">Clear</button>
+            </section>
+        </form>
+    </main>
+</body>
+</html>
