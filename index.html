@@ -10,13 +10,13 @@
 <body>
     <main>
         <h1>Reservation Request</h1>
-        <form onsubmit="handleSubmit(event);" novalidate>
+        <form id="form" onsubmit="handleSubmit(event);" novalidate>
             <fieldset>
                 <legend>
                  <h5>General Information</h5>
                 </legend>
                     <div>
-                        <label for="arrival_date">Arribal date:</label>
+                        <label for="arrival_date">Arrival date:</label>
                         <input type="date" name="arrival_date" id="arrival_date" required>
                         <span id="arrival_date_error"></span>
                     </div>
@@ -27,7 +27,7 @@
                      </div>
                      <div>
                         <label for="adults">Adults:</label>
-                        <select name="arrival_date" id="arrival_date" required>
+                        <select name="adults" id="adults" required>
                             <option value="0">0</option>
                             <option value="1" selected>1</option>
                             <option value="2">2</option>
@@ -51,22 +51,22 @@
                 <div>
                     <label for="">Room type:</label>
 
-                    <input type="radio" id="standard" name="radioType" value="standard">
+                    <input type="radio" id="standard" name="roomType" value="standard" checked>
                     <label for="standard">Standard</label>
 
-                    <input type="radio" id="bussiness" name="radioType" value="bussiness">
+                    <input type="radio" id="bussiness" name="roomType" value="bussiness">
                     <label for="bussiness">Bussiness</label>
 
-                    <input type="radio" id="suite" name="radioType" value="suite">
+                    <input type="radio" id="suite" name="roomType" value="suite">
                     <label for="suite">Suite</label>
 
-                    <span id="radioType_error"></span>
+                    <span id="roomType_error"></span>
 
                 </div>
                 <div>
                     <label for="">Bed type:</label>
 
-                    <input type="radio" id="king" name="bedType" value="king">
+                    <input type="radio" id="king" name="bedType" value="king" checked>
                     <label for="king">King</label>
 
                     <input type="radio" id="double_double" name="bedType" value="double_double">
@@ -105,5 +105,6 @@
             </section>
         </form>
     </main>
+    <a href="http://127.0.0.1:5500/view.html">Go to View</a>
 </body>
 </html>

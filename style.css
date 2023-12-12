@@ -35,3 +35,7 @@ fieldset {
 span {
     color: red;
 }
+
+table, th, td {
+    border: 1px solid black;
+}
